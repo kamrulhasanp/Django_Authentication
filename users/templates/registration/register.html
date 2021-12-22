@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="form-group">
+<h1>Register your account</h1>
+
+<form method="POST" action="{% url 'register' %}">
+    {% csrf_token %}
+    {{form.as_p}}
+
+   <p> <input type="submit" value="Register"></p>
+</form>
+</div>
+
+{% endblock content %}

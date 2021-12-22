@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+{% block content  %}
+{% if user.is_authenticated %}
+
+<h1 style="text-align: center;">Hi,{{user.first_name}}.  This is Your Authentication page.</h1>
+{% else %}
+<h1 style="text-align: center;" >This is the Authentication System.</h1>
+{% endif %}
+{% endblock content %}

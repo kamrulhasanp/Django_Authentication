@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="form-group">
+<form action="{% url 'login' %}" method="POST">
+    {% csrf_token %}
+    <p>UserName  {{form.username}} </p>
+    <p>Password  {{form.password}}</p>
+   
+<p>Don't have account ! please register <a href="{% url 'register' %}">here</a> </p>
+
+<p ><a href="{% url 'password' %}" >Forgot password?</a> </p>
+
+<p><input type="submit" value="Log in"></p>
+</form>
+</div>
+
+{% endblock content %}
